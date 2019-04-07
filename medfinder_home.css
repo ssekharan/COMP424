@@ -1,0 +1,160 @@
+ *{
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+
+  }
+
+  h1{
+  float:inherit;
+  color: black;
+  padding: 40px;
+  text-align: left;
+  font-size: 40px;
+  font-weight: bolder;
+  }
+body{
+  background-image:url(backgroun.jpg);
+  background-size:cover;
+
+}
+  h2{
+text-align: center;
+padding: 40px;
+font-size: 20px;
+color: black;
+
+  }
+.Login{
+
+float:right;
+padding: inherit;
+color: black;
+
+
+}
+
+/* The Modal (background) */
+.log {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.content {
+  background-color: #fefefe;
+  margin: 5px auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  float: right;
+}
+
+/* The Close Button */
+.close {
+  /* Position it in the top right corner outside of the modal */
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+/*Search Button*/
+.searchbutton{
+  color: black;
+  text-align: center;
+  text-decoration:underline;
+  display: inline-flex;
+  width: 100%;
+  font-size: 20px;
+  padding: 10px 24px;
+  float: center;
+  padding:60px;
+
+}
+/*Dropdown Boxes*/
+.flex-container{
+display:flex;
+flex-direction:row;
+justify-content: space-around;
+padding: 60px;
+}
+
+
+/*Sidebar*/
+.Sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  padding-top: 60px;}
+.Sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;}
+.Sidebar a:hover {
+  color: gainsboro;}
+.Sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;}
+
+
+
+/*FOOTER*/
+  .footer{
+    background-color: #808080;
+    width: 100%;
+    color: white;
+    position:absolute;
+    left:0;
+    right:0;
+    padding: 10px;
+    text-align: center;}
