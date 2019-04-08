@@ -10,9 +10,13 @@
 <link href='https://fonts.googleapis.com/css?family=Codystar' rel='stylesheet'>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <script src="medfinder_home.js"></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
 </head>
 
 <body>
+  <div class="wrapper">
+    <div class="banner">
   <!--TOP HEADER-->
   <div class="header">
     <h1>MedFinder</h1>
@@ -23,38 +27,20 @@
   </div>
 
 
-<!--Log in Button-->
-<button onclick="document.getElementById('log').style.display='block'">Login</button>
-
-<div id="log" class="log">
-  <span onclick="document.getElementById('log').style.display='none'"
-class="close" title="Close">&times;</span>
-
-
-  <form class="content animate" action="/action_page.php">
-
-
-    <div class="container">
-      <label for="username"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="username" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="password" required>
-
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
+  <div class="banner-extras">
+    <div class="site-search">
+      <input type="search" name="search_query" placeholder="enter state code...e.g. IL">
+      <input type="submit" value="search" name="search_submit" class="submit-button">
     </div>
+    <div class="site-user">
+      <div class="user-login">
+        <a href="medfinder_login.html"><input type="submit" value="login" name="user_login" class="submit-button" ></a>
 
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('log').style.display='none'" class="cancel">Cancel</button>
-      <span class="password">Forgot <a href="#">password?</a></span>
+        <a href="medfinder_signup.html"><input type="submit" value="register" name="user_register" class="submit-button"></a>
+      </div>
     </div>
-  </form>
+  </div>
 </div>
-
-
 
 <!--
 
@@ -105,7 +91,8 @@ class="close" title="Close">&times;</span>
 //-->
 
 <!--Flexbox-->
-<div class="flex-container">
+
+<nav class="site-nav" aria-labelledby="primary-navigation">
   <div class="Specialty">
     <select>
     <option value="Specialty">Specialty</option>
@@ -134,19 +121,58 @@ class="close" title="Close">&times;</span>
   </select>
 </div>
 
+</nav>
+<main class="site-content">
+  <section id="page-content" class="content">
+
+  </section>
+</main>
+<!--<div class="flex-container">
+  <div class="Specialty">
+    <select>
+    <option value="Specialty">Specialty</option>
+    <option value="Internal Medicine">Internal Medicine</option>
+    <option value="Pediatrics">Pediatrics</option>
+    <option value="Rheumatology">Rheumatology</option>
+    <option value="Orthopedics">Orthopedics</option>
+    <option value="Internal Medicine">Internal Medicine</option>
+    <option value="Pediatrics">Pediatrics</option>
+    <option value="Rheumatology">Rheumatology</option>
+  </select>
 </div>
+  <div class="Insurance">
+    <select>
+    <option value="Insurance">Insurance</option>
+  </select>
+</div>
+  <div class="Problem">
+    <select >
+    <option value="Medical Problem">Medical Problem</option>
+  </select>
+</div>
+  <div class="Distance">
+    <select>
+    <option value="Distance">Distance</option>
+  </select>
+</div>
+
+</div>-->
 
 <!--Search Button-->
 <div class="searchbutton"
 <p><button>Search</button></p>
 </div>
 
+
+
+  <script src="medfinder_home.js"></script>
+</div>
 <!--FOOTER-->
   <div class="footer">
     <p>Loyola University Chicago, COMP424, Spring 2019</p>
     <p>by Swaeta Sekharan</p>
   </div>
-
 </body>
+
 
 </html>

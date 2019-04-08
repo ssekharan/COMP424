@@ -1,13 +1,8 @@
- *{
-  box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
-  font-size: 15px;
 
-  }
 
   h1{
   float:inherit;
-  color: black;
+  color: #0096B2;
   padding: 40px;
   text-align: left;
   font-size: 40px;
@@ -16,6 +11,13 @@
 body{
   background-image:url(backgroun.jpg);
   background-size:cover;
+  padding: 1vh;
+  font-weight: 400;
+	font-size: 15px;
+	line-height: 1.5;
+	margin: 0;
+	padding: 1vh;
+	color: #555;
 
 }
   h2{
@@ -23,72 +25,62 @@ text-align: center;
 padding: 40px;
 font-size: 20px;
 color: black;
-
   }
+
+
 .Login{
 
 float:right;
 padding: inherit;
 color: black;
-
-
+}
+/* SITE SEARCH */
+.site-search {
+	grid-area: site-search;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
 }
 
-/* Log in */
-.log {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4);
-  padding-top: 60px;
+.site-user {
+	grid-area: site-user;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
 }
 
-/* Log in Box*/
-.content {
-  background-color: #fefefe;
-  margin: 5px auto;
-  border: 1px solid #888;
-  width: 80%;
-  float: right;
+.user-login {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	padding: 10px;
 }
 
-/* The Close Button */
-.close {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
+
+/* primary site nav */
+.site-nav {
+	grid-area: nav-primary;
+	/*border: 1px solid #0096B2;*/
 }
 
-/* Hover close */
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
+/* GRID - BANNER EXTRAS */
+.banner-extras {
+	grid-area: banner-extras;
+	display: grid;
+	grid-template-areas:
+		"site-search site-user";
+	grid-template-columns: minmax(200px, auto) minmax(100px, max-content);
 }
 
-/* Zoom Animation*/
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
+.banner-extras h4 {
+	font-size: 1rem;
+	display: flex;
+	justify-content: center;
 }
 
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)}
-  to {-webkit-transform: scale(1)}
-}
 
-@keyframes animatezoom {
-  from {transform: scale(0)}
-  to {transform: scale(1)}
-}
 
 /*Search Button*/
 .searchbutton{
@@ -104,15 +96,82 @@ color: black;
 
 }
 /*Dropdown Boxes*/
-.flex-container{
+.site-nav{
 display:flex;
 flex-direction:row;
 justify-content: space-around;
 padding: 60px;
 }
 
+/*
+* INPUT - various input field and usage
+*/
 
-/*Sidebar*/
+/* general input  */
+.submit-button {
+	padding: 5px;
+	border: 1px solid #137fa6;
+	background-color: #137fa6;
+	color: #fff;
+}
+
+.submit-button:hover {
+	background-color: #b97454;
+	border: 1px solid #b97454;
+	color: #fff;
+	cursor: pointer;
+}
+
+/* search input */
+input[name="search_query"] {
+	border: 1px solid #137fa6;
+	width: 180px;
+	padding: 5px;
+	outline: none;
+	color: #444;
+}
+
+/* search submit */
+input[name="search_submit"] {
+	width: 60px;
+	margin: 0 5px;
+	outline: none;
+}
+
+/* USER - login, register */
+input[name="user_login"], input[name="user_register"] {
+  width: 70px;
+	margin: 5px 0;
+	outline:none;
+}
+
+/* GRID - BANNER container */
+.banner {
+	grid-area: banner;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-areas:
+		"site-header banner-extras";
+	grid-template-columns: 1fr auto;
+	grid-template-rows: auto;
+	padding: 10px;
+	border: 1px solid #0096B2;
+}
+
+/* GRID - WRAPPER container */
+.wrapper {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-rows: auto auto 1fr;
+	grid-template-areas:
+		"banner"
+		"nav-primary"
+		"main";
+	height: 98vh;
+}
+
+
+/*Sidebar
 .Sidebar {
   height: 100%;
   width: 0;
@@ -142,7 +201,7 @@ padding: 60px;
   top: 0;
   right: 25px;
   font-size: 36px;
-  margin-left: 50px;}
+  margin-left: 50px;}*/
 
 
 
