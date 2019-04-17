@@ -84,24 +84,31 @@ color: black;
 
 /*Search Button*/
 .searchbutton{
-  color: black;
+ color: black;
   text-align: center;
   text-decoration:underline;
   display: inline-flex;
   width: 100%;
   font-size: 20px;
   padding: 10px 24px;
-  float: center;
+  float: right;
   padding:60px;
 
+justify-content: center;
+
 }
+
 /*Dropdown Boxes*/
 .site-nav{
 display:flex;
 flex-direction:row;
 justify-content: space-around;
 padding: 60px;
+font-size: 60px;
+
 }
+
+
 
 /*
 * INPUT - various input field and usage
@@ -113,6 +120,8 @@ padding: 60px;
 	border: 1px solid #137fa6;
 	background-color: #137fa6;
 	color: #fff;
+  float: inherit;
+
 }
 
 .submit-button:hover {

@@ -12,6 +12,7 @@
 <script src="medfinder_home.js"></script>
 <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
 <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
 </head>
 
 <body>
@@ -93,8 +94,9 @@
 <!--Flexbox-->
 
 <nav class="site-nav" aria-labelledby="primary-navigation">
-  <div class="Specialty">
+  <div class="Specialty" id="specialty">
     <select>
+  <!--  <option value="Name">{{name}}</option>-->
     <option value="Specialty">Specialty</option>
     <option value="Internal Medicine">Internal Medicine</option>
     <option value="Pediatrics">Pediatrics</option>
@@ -105,19 +107,22 @@
     <option value="Rheumatology">Rheumatology</option>
   </select>
 </div>
-  <div class="Insurance">
+  <div class="Insurance" id="insurance">
     <select>
     <option value="Insurance">Insurance</option>
   </select>
 </div>
-  <div class="Problem">
+  <div class="Problem" id= "problem">
     <select >
     <option value="Medical Problem">Medical Problem</option>
   </select>
 </div>
-  <div class="Distance">
+  <div class="Distance" id="distance">
     <select>
     <option value="Distance">Distance</option>
+    <option value="10 Miles">10 Miles</option>
+    <option value="50 Miles">50 Miles</option>
+    <option value="100 Miles">100 Miles</option>
   </select>
 </div>
 
@@ -159,8 +164,8 @@
 </div>-->
 
 <!--Search Button-->
-<div class="searchbutton"
-<p><button>Search</button></p>
+<div class="searchbutton" id="search">
+<button>Search</button>
 </div>
 
 

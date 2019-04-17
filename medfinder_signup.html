@@ -9,21 +9,35 @@
 <link rel="stylesheet" type="text/css" href="medfinder_signup.css">
 <link href='https://fonts.googleapis.com/css?family=Codystar' rel='stylesheet'>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<script src="medfinder_signup.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
 </head>
 <div id="sl" class="slcontainer">
   <div class="slform">
     <form class="signupform">
-      <input type="text" name="user-login" placeholder="Email">
-      <input type="text" name="user-login" placeholder="Username">
-      <input type="text" name="user-login" placeholder="Password">
-      
-      <button>Sign Up</button>
+      <input type="text" id="user-login" placeholder="Email">
+      <input type="text" id="user-login" placeholder="Username">
+      <input type="text" id="user-login" placeholder="Password">
+
+      <button id="signup">Sign Up</button>
       <p class="message">Already signed up? <a href="medfinder_login.html">Log in</a></p>
     </form>
 
   </div>
 </div>
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBSl2knTxuNpTobPX3-PYFKltRBJex40Wc",
+    authDomain: "medfinder-537df.firebaseapp.com",
+    databaseURL: "https://medfinder-537df.firebaseio.com",
+    projectId: "medfinder-537df",
+    storageBucket: "medfinder-537df.appspot.com",
+    messagingSenderId: "647838828818"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="medfinder_signup.js"></script>
 
 </html>

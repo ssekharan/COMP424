@@ -1,5 +1,11 @@
 
-
+var api_key = '7bb72b96bdfea9865f3f539104b810e1'; // Get your API key at developer.betterdoctor.com
+var resource_url = 'https://api.betterdoctor.com/2016-03-01/specialties?skip=0&limit=20&user_key=' + api_key;
+$.get(resource_url, function (data) {
+     data: { meta: {<metadata>}, data: {<array[Specialty]>} }
+    var template = Handlebars.compile(document.getElementById('specialty').innerHTML);
+    document.getElementById('specialty').innerHTML = template(data);
+});
 function getDoctors(code) {
 	const apiURL = 'https://api.betterdoctor.com/2016-03-01/doctors?';
 	// lat & long & radius in miles for 60626
