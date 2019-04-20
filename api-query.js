@@ -105,13 +105,13 @@ function objectSort(data, compare) {
 * EVENT: listen for click event on menu item
 * - specific example for 'specialties'
 */
-function handleFormSubmit(specialty, insurance, problem, zipcode) {
+function handleFormSubmit(specialty, insurance, gender, zipcode) {
 	// call 'read' async function for API query
 	var specialty_param = "specialty_uid=" + encodeURIComponent(specialty);
 	var insurance_param = "&insurance_uid=" + encodeURIComponent(insurance);
-	var problem_param= "&query=" +encodeURIComponent(problem);
+	var gender_param= "&query=" +encodeURIComponent(gender);
 	var zip_code = "&location=" + encodeURIComponent(zipcode);
-	var params = specialty_param + insurance_param + problem_param + zip_code;
+	var params = specialty_param + insurance_param + gender_param + zip_code;
 
 	read('doctors', params).then(
 	    (val) => {
@@ -272,9 +272,9 @@ document.getElementById('my-form').addEventListener('submit', function(event) {
 
 const specialty = document.getElementById('select-specialty').value;
 const insurance = document.getElementById('select-insurance').value;
-const problem = document.getElementById('input-problem').value;
+const gender = document.getElementById('select-gender').value;
 const zip = document.getElementById('input-zip').value;
-handleFormSubmit(specialty, insurance, problem, zip);
+handleFormSubmit(specialty, insurance, gender, zip);
 
 event.preventDefault();
 })
