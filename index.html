@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>BetterDoctor API Test - Specialties</title>
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="banner">
+        <header class="site-header">
+            <h3>BetterDoctor API - Test</h3>
+            <h5>Find a physician based on specialty, insurance, problem, and distance!</h5>
+        </header>
+        <div class="banner-extras">
+            <!--<div class="site-search">-->
+            <!--<input type="search" name="search_query" placeholder="enter state code...e.g. CA">-->
+            <!--<input type="submit" value="search" name="search_submit" class="submit-button">-->
+            <!--</div>-->
+            <div class="site-user">
+                <div class="user-login">
+                    <input type="submit" value="login" name="user_login" class="submit-button">
+                    <input type="submit" value="register" name="user_register" class="submit-button">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<nav class="site-nav" aria-labelledby="primary-navigation">-->
+    <!--<ul>-->
+    <!--<li><a id="specialty">specialty</a></li>-->
+    <!--<li><a id="insurance">insurance</a></li>-->
+    <!--<li><a id="problem">problem</a></li>-->
+    <!--<li><a id="distance">distance</a></li>-->
+    <!--</ul>-->
+    <!--</nav>-->
+    <div class="site-nav" aria-labelledby="primary-navigation">
+        <form id="my-form">
+            <div class="Specialty" id="specialty">
+                <select id="select-specialty">
+                    <!--  <option value="Name">{{name}}</option>-->
+                    <option value="" selected disabled hidden>Specialty</option>
+                    <option value="internist">Internal Medicine</option>
+                    <option value="pediatrician">Pediatrics</option>
+                </select>
+            </div>
+            <div class="Insurance" id="insurance">
+                <select id="select-insurance">
+                    <option value="" selected disabled hidden>Insurance</option>
+                    <option value="amerihealth">Amerihealth</option>
+                    <option value="aetna">Aetna</option>
+                    <option value="bcbsbluecard-bcbsbluecardppo">BCBS-PPO</option>
+                    <option value="anthem">Anthem</option>
+                    <option value="cigna-cignahmo">Cigna HMO </option>
+                </select>
+            </div>
+            <div class="Problem" id="problem">
+                <input id="input-problem" name="problem" type="text" placeholder="Enter problem">
+            </div>
+            <div class="Zip" id="zip">
+                <input id="input-zip" name="location" type="text" placeholder="Enter location">
+            </div>
+            <div class="searchbutton" id="search">
+                <button>Search</button>
+            </div>
+        </form>
+
+    </div>
+    <main class="site-content">
+        <section id="page-content" class="content">
+
+        </section>
+    </main>
+    <footer>
+        <p>&#169; 2019 - betterdoctor test api query</p>
+    </footer>
+</div>
+<script src="./src/api-query.js"></script>
+<script src="./src/insurance-query.js"></script>
+</body>
+</html>
