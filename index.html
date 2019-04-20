@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>BetterDoctor API Test - Specialties</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
 </head>
 <body>
 <div class="wrapper">
@@ -53,8 +53,13 @@
                     <option value="cigna-cignahmo">Cigna HMO </option>
                 </select>
             </div>
-            <div class="Problem" id="problem">
-                <input id="input-problem" name="problem" type="text" placeholder="Enter problem">
+            <div class"gender" id="gender">
+              <select id="select-gender">
+              <option value="" selected disabled hidden>Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+              <!--<input id="input-problem" name="problem" type="text" placeholder="Enter problem">-->
             </div>
             <div class="Zip" id="zip">
                 <input id="input-zip" name="location" type="text" placeholder="Enter location">
@@ -74,7 +79,7 @@
         <p>&#169; 2019 - betterdoctor test api query</p>
     </footer>
 </div>
-<script src="./api-query.js"></script>
-<script src="./insurance-query.js"></script>
+<script src="./src/api-query.js"></script>
+
 </body>
 </html>
